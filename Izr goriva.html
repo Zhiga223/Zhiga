@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">
+<html>
+<head>
+<title>Izračun goriva</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src=barve.js></script>
+<style type="text/css">
+h1{color:maroon; font-family:Arial
+}
+table,td,tr{border-collapse: collapse;padding:5px;text-align: center}
+body{background-image: url("http://elmont.si/wp-content/uploads/2015/02/PETROL3.jpg");background-size: cover;}
+div{background-color:white; font-family:Arial}
+</style>
+</head>
+<body>
+
+<table align="center">
+<tr>
+	<td>
+		<h1>Izračun porabe goriva</h1>
+	</td>
+</tr>
+<tr>
+	<td>
+		<input type="number" value=null name="dolzina" placeholder="Dolžina poti" id="dol"/>
+	</td>
+</tr>
+<tr>
+	<td>
+		<input type="number" value=null name="poraba" placeholder="Poraba/100km" id="por"/>
+	</td>
+</tr>
+<tr>
+	<td>
+		<input type="number" value=null name="cena" placeholder="Cena goriva" id="cen"/>
+	</td>
+</tr>
+<tr>
+	<td>
+<p> <button onclick="izr()">Izračun</button></p>
+	</td>
+</tr>
+<tr>
+	<td>
+<div id="rezultat" class="f"></div>
+	</td>
+</tr>
+<tr>
+	<td>
+<div id="rezultatdva" class="f"></div>
+	</td>
+</tr>
+</table>
+<script type="text/javascript">
+
+function izr(){
+var rezultat = document.getElementById('rezultat')
+var rezultatdva = document.getElementById('rezultatdva')
+var d= document.getElementById('dol').value
+var p= document.getElementById('por').value
+var c= document.getElementById('cen').value
+var rez= d/100*p*c
+var dvo= rez*2
+rezultat.innerHTML = "Cena goriva: "+rez+" €."
+rezultatdva.innerHTML = "Cena goriva v obe smeri: "+dvo+" €. "
+}
+
+</script>
+
+</body>
+</html>
