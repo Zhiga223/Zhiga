@@ -61,8 +61,8 @@ var p= document.getElementById('por').value
 var c= document.getElementById('cen').value
 var rez= d/100*p*c
 var dvo= rez*2
-rezultat.innerHTML = "Cena goriva: "+rez+" €."
-rezultatdva.innerHTML = "Cena goriva v obe smeri: "+dvo+" €. "
+rezultat.innerHTML = "Cena goriva: "+rez.toFixed(2)+" €."
+rezultatdva.innerHTML = "Cena goriva v obe smeri: "+dvo.toFixed(2)+" €. "
 }
 
 </script>
